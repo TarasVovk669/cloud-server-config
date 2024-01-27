@@ -1,0 +1,37 @@
+server:
+  port: ${APP_ADMIN_SERVER_PORT:8099}
+spring:
+  threads:
+    virtual:
+      enabled: ${APP_ADMIN_ENABLE_VIRTUAL_THREAD:true}
+  security:
+    user:
+      name: ${APP_ADMIN_USERNAME}
+      password: ${APP_ADMIN_PASSWORD}
+  boot:
+    admin:
+      client:
+        url: ${APP_ADMIN_CLIENT_URL:http://localhost:8091}
+        username: ${spring.security.user.name}
+        password: ${spring.security.user.password}
+        instance:
+          metadata:
+            user:
+              name: ${spring.security.user.name}
+              password: ${spring.security.user.password}
+management:
+  info:
+    env:
+      enabled: true
+  endpoint:
+    health:
+      show-details: always
+    logfile:
+      external-file: ${logging.file.name}
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+logging:
+  file:
+    name: logs/admin-service.log
