@@ -1,7 +1,7 @@
 hello:
-  my-command1: "1234567876543"
-  my-command2: "ssdfg"
-  my-command3: "ghfd"
+  my-command1: "QQQQQ"
+  my-command2: "111111"
+  my-command3: "222222"
 spring:
   myvalue:
     wqas: "HEEELLLOOOOO"
