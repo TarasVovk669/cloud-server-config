@@ -1,6 +1,6 @@
 eureka:
   client:
     registerWithEureka: ${APP_DISCOVERY_REGISTER_WITH_EUREKA:false}
-    fetchRegistry:  ${APP_DISCOVERY_FETCH_REGISTRY:true}
+    fetchRegistry:  ${APP_DISCOVERY_FETCH_REGISTRY:false}
     service-url:
       defaultZone: http://tf-discovery-user:password@localhost:8761/eureka
