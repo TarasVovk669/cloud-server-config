@@ -1,0 +1,27 @@
+server:
+  port: ${APP_DISCOVERY_PORT:8761}
+spring:
+  profiles:
+    include:
+      - admin-client
+      - discovery-client
+  security:
+    user:
+      name: tf-discovery-user
+      password: password123
+management:
+  info:
+    env:
+      enabled: true
+  endpoint:
+    health:
+      show-details: always
+    logfile:
+      external-file: ${logging.file.name}
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+logging:
+  file:
+    name: logs/discovery-service.log
