@@ -14,8 +14,6 @@ spring:
           password: ${APP_GIT_PASSWORD}
           clone-on-start: true
           default-label: ${APP_GIT_BRANCH:main} # for git branches
-  application:
-    name: tf-config-service
   threads:
     virtual:
       enabled: ${APP_CONFIG_ENABLE_VIRTUAL_THREAD:true}
