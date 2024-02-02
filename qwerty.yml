@@ -1,2 +1,5 @@
 hello:
   command1: hello qwerty
+spring:
+  application:
+    name: Proj-11-example
